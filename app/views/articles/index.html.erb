@@ -1,9 +1,12 @@
+<%= link_to "New Article", new_article_path %>
 <h1>List Of All Articles</h1>
 <ol>
     <% @article.each do |a| %>
         <li>
             Title: <%= a.title %><br>
-            Description: <%= a.description %>
+            Description: <%= a.description %><br>
+           <%= link_to "Edit", edit_article_path(a.id) %>
+           <%= link_to "Show", article_path(a.id) %>
         </li><br>
     <% end %>
 </ol>
