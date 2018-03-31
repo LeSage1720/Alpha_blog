@@ -1,2 +1,13 @@
+$navbar-default-bg: dodgerblue;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo{
+    color: White;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#links{
+    color: white;
+}
