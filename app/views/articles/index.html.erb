@@ -7,6 +7,8 @@
             Description: <%= a.description %><br>
            <%= link_to "Edit", edit_article_path(a.id) %>
            <%= link_to "Show", article_path(a.id) %>
+           <%= link_to "Delete", article_path(a.id), method: :delete, data: {confirm: "Are you sure"} %>
+           
         </li><br>
     <% end %>
 </ol>
