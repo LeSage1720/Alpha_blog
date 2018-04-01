@@ -6,8 +6,24 @@ $navbar-default-bg: dodgerblue;
     color: White;
     font-size: 2em;
     font-weight: bold;
-}
+    }
 
 #links{
     color: white;
-}
+    }
+
+.jumbotron{
+    background-image: asset-url("bg_img.jpg");
+    background-size: cover;
+    min-height: 450px;
+    overflow: hidden;
+    }
+
+.show-case{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    min-height: 300px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    }
