@@ -4,7 +4,7 @@
 </p>
 
 <p>
-    <b>Description:</b> <%= @article.description %>
+    <b>Description:</b> <%= sanitize @article.description %>
 </p>
 
 <%= link_to "New Article", new_article_path %>
