@@ -1,11 +1,11 @@
 <h1>Article created</h1>
 <p>
-    <b>Title:</b> <%= @article.title %>
+    <b>Título:</b> <%= @article.title %>
 </p>
 
 <p>
-    <b>Description:</b> <%= sanitize @article.description %>
+    <b>Descripción:</b> <%= sanitize @article.description %>
 </p>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path %> |
 <%= link_to "Articles", articles_path %>
