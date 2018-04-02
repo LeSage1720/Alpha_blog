@@ -12,11 +12,17 @@ $navbar-default-bg: dodgerblue;
     color: white;
     }
 
-.jumbotron{
+.jumbotron_home{
     background-image: asset-url("bg_img.jpg");
     background-size: cover;
     min-height: 450px;
     overflow: hidden;
+    }
+    
+.jumbotron_index{
+    min-height: 100px;
+    padding: 5px 5px 5px 5px;
+    
     }
 
 .show-case{
