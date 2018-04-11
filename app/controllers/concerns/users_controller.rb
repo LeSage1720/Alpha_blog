@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
     
+    def index
+        @user = User.all
+    end
+    
     def new
         @user = User.new
     end
@@ -7,8 +11,8 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            flash[:success] = "Hola #{@user.username.capitalize}, Bienvenido a Prohacktividad!"
-            redirect_to articles_path
+            flash[:success] = "Hola #{@user.username.upcase}, Bienvenido a Prohacktividad!"
+            redirect_to user_path(@user)
         else
             render :new
         end

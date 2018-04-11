@@ -1,0 +1,10 @@
+<% @user.each do |user| %>
+    <div class="user-listing">
+        <span class="user-img"><%= link_to gravatar_for(user), user_path(user)%></span> 
+        <span class="user-name">
+         <%= link_to user.username, user_path(user)%> 
+        </span><br>
+        <em style="margin-left: 70px;"><%= pluralize(user.articles.count, "articulo")%></em>
+    </div>   
+  
+<% end %>
