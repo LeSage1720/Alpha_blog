@@ -3,7 +3,7 @@ $navbar-default-bg: dodgerblue;
 @import "bootstrap";
 
 body{
-    color: steelblue;
+    background-color: steelblue;
     }
 
 #logo{
@@ -18,8 +18,9 @@ body{
 
 .jumbotron_index{
     min-height: 100px;
+    max-width: 90%;
     padding: 5px 5px 5px 5px;
-    
+    margin: auto;
     }
     
 .jumbotron_home{
