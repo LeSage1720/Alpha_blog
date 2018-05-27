@@ -5,20 +5,23 @@
     <div class="jumbotron jumbotron_index">
       <h4 class="display-4"><%= link_to a.title, article_path(a.id) %></h4>
         <p class="lead">
-          <% sanitize a.description[0...150] + "..." %>
+          <%= sanitize a.description[0...150] + "..." %>
           <em><%= a.created_at %></em>|
           <em><%= a.user.username %></em>
         </p> 
         <hr class="my-4">
           
           <%= link_to "Show", article_path(a.id) %> |
-          <%= link_to "Edit", edit_article_path(a.id) %> |
-          <%= link_to "Delete", article_path(a.id), method: :delete, data: {confirm: "Are you sure"} %>
+          
+          <!-- links ONLY FOR ADMIN -->
+          <% if logged_in? && (current_user == a.user || current_user.admin?) %>
+           <%= link_to "Edit", edit_article_path(a.id) %> |
+           <%= link_to "Delete", article_path(a.id), method: :delete, data: {confirm: "Are you sure"} %>
+          <%end%>
           <!--THESE LINES DISPLAYED SINCE HOW MANY DAYS THE ARTICLE HAVE BEEN CREATED
             b = Date.today.to_time %>
             (b.to_time.to_i - a.created_at.to_i)/1.day %>
           -->
     </div>
   <% end %>
-  
 </div>

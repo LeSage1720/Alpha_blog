@@ -20,15 +20,35 @@
 
 
 <!-- SHOW RECENT POST ON HOME PAGE-->
-
-    <% @a.each do |a| %>
+<div class="section-1-header">
+    <hr>
+    <h2 class="text-center">Publicaciones recientes</h2>
+    <hr>
+</div>
+<div>
+    <% @article.last(6).each do |a| %>
       <% b = Date.today.to_time %>
       <% if (b.to_time.to_i - a.created_at.to_i)/1.day < 10 %>
            
-            <div class="jumbotron">
-                <h3><%= a.title %></h3>
-                <p><%= sanitize a.description[0...100] + "..." %></p>
-            </div>
+        <div class="col-6 col-sm-6 col-lg-6">
+        <h2><%= link_to a.title, article_path(a.id)%></h2>
+        <em><%= a.created_at%></em>
+        <p><%= sanitize a.description[0...150] + "..."%></p>
+        <%= link_to "Leer más»", article_path(a.id), class: "btn btn-default" %>
+         <% if logged_in? && (current_user == a.user || current_user.admin?) %>
+           <%= link_to "Edit", edit_article_path(a.id), class: "btn btn-default" %> |
+           <%= link_to "Delete", article_path(a.id), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure"} %>
+        <%end%>
+        <hr>
+    </div>
       
        <% end %> 
     <% end %>
+</div>
+
+
+<div class="section-2-header">
+  <hr>
+  <h2 class="text-center">Plantillas recientes</h2>
+  <hr>
+</div>

@@ -1,9 +1,17 @@
-$navbar-default-bg: dodgerblue;
+$navbar-default-bg: white;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 
 body{
-    background-color: steelblue;
+    background-color: #aed49e;
+    padding-top: 6.5rem;
     }
 
 #logo{
@@ -13,7 +21,7 @@ body{
     }
 
 #links{
-    color: white;
+    color: black;
     }
 
 .jumbotron_index{
@@ -42,6 +50,7 @@ body{
     
 .show-article{
     border-left: 2px solid dodgerblue;
+    background-color: beige;
 }   
     
 footer{
@@ -67,4 +76,26 @@ ul, li{
 
 .user-name{
     font-size: 20px;
+}
+
+p{
+    color: white;
+}
+.navbar-default {
+    background-color: white;
+    border-bottom-color: green;
+}
+
+.section-1-header{
+    background-color: mediumseagreen;
+    color: white;
+}
+
+.col-sm-6 {
+    color: black;
+    background-color: white;}
+    
+.section-2-header{
+    background-color: mediumseagreen;
+    color: white;
 }

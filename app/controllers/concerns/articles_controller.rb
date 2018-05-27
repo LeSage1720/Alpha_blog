@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     end
     
     def index
-        @article = Article.all.paginate(page: params[:page], per_page: 1)
+        @article = Article.all.paginate(page: params[:page], per_page: 6)
     end
     
     def new
@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
     end
     
     def require_same_user
-        if current_user != @articole.user
+        if current_user != @article.user and !current_user.admin?
             flash[:danger] = "You can only edit your own article"
             redirect_to root_path
         end
