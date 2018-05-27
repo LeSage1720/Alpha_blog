@@ -7,7 +7,7 @@
         </span><br>
         <em style="margin-left: 70px;"><%= pluralize(user.articles.count, "articulo")%></em>
         <% if logged_in? && current_user.admin? %>
-         | <%= link_to "Delete user", users_path, method: :delete, data: {confirm: "Are you sure"} %>
+         | <%= link_to "Delete user", user_path(user), method: :delete, data: {confirm: "Are you sure"} %>
         <%end%>
     </div>   
   
