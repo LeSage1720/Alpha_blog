@@ -4,17 +4,17 @@
      <div class="container">
       <p class="text-center">
         
-          ProHacktividad es una Aplicación Web para compartir 
-          conocimientos, artículos, archivos, libros PDF relacionados a la programación.
+          Excel360 es donde puedes resolver tus dudas sobre las funciones de Excel y aprender nuevas funciones.  
+          Támbien puedes descargar plantillas gratis para automatizar tus trabajos en Excel.
           <br>
           <hr>
-        <h4 style="color:cyan;">WebApp Under Construction</h4>
-        <em>Programmer:<b>Paterson Anaccius</b> con la ayuda de <b>Don Juan</b></em>
+        <h3 style="color:cyan;">Excel360</h3>
+        <em>Tu enciclopedía Excel</em>
       </p>
      </div>
   </div>
   <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>-->
-  <%= link_to "Pater Blog", articles_path, class: "btn btn-primary btn-lg" %>
+  <%= link_to "Excel Blog", articles_path, class: "btn btn-primary btn-lg" %>
   <%= link_to "Acerca", about_path, class: "btn btn-primary btn-lg" %>
 </div>
 
@@ -27,7 +27,7 @@
 </div>
 
     <div class="row"> 
-        <% @article.last(6).each do |a| %>
+        <% @article.last(4).each do |a| %>
              
             <div class="col-6 col-sm-6 col-lg-6">
                 <h2><%= link_to a.title, article_path(a.id)%></h2>
@@ -50,4 +50,16 @@
   <hr>
   <h2 class="text-center">Plantillas recientes</h2>
   <hr>
+</div>
+
+<div class="row text-center">
+    <h3>CONTROL VACACIONES EXCEL PLANILLA PROFESSIONAL 2018</h3>
+    <hr>
+    <div class="col-12 col-sm-12 col-lg-12">
+        <p>Primero: te podes mover a traves de la hoja con las flechas del teclado ↑↓←→</p>
+        <br>
+        <img class="imagen" border="0" 
+        src="https://ugc.kn3.net/i/origin/https://www.excelfrog.com/tuto/b/1.gif" 
+        alt="rapido" title="rapido">
+    </div>
 </div>
